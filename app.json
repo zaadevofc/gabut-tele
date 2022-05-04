@@ -1,0 +1,9 @@
+{
+  "name": "testertelegrambot",
+  "description": "Tester Telegram Bot",
+  "repository": "https://github.com/zaadevofc/gabut-tele",
+  "logo": "https://node-js-sample.herokuapp.com/node.png",
+  "keywords": [
+    "bot"
+  ]
+}
