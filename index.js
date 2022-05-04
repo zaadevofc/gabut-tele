@@ -5,6 +5,8 @@ const tele = require('./lib/tele')
 const chalk = require('chalk')
 const os = require('os')
 const fs = require('fs')
+const express = require('express')
+const app = express()
 
 const {
     apikey,
@@ -963,6 +965,14 @@ bot.telegram.getMe().then((getme) => {
     console.log(chalk.greenBright(" │ + Prefix   : " + itsPrefix))
     console.log(chalk.greenBright(' ===================================================='))
     console.log(chalk.whiteBright('╭─── [ LOG ]'))
+})
+
+app.get('/', (req, res) => {
+    res.send('Konekkk!!!')
+})
+
+app.listen(8000, (req, res) => {
+    console.log('Okee')
 })
 process.once('SIGINT', () => bot.stop('SIGINT'))
 process.once('SIGTERM', () => bot.stop('SIGTERM'))
