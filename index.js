@@ -953,6 +953,17 @@ bot.on("message", async(lol) => {
     }
 })
 
+app.get('/', (req, res) => {
+    res.send('Konekkk!!!')
+})
+
+app.get('/author', (req, res) => {
+    res.send('Author : @zaadevofc')
+})
+
+app.listen(3000, () => {
+    console.log('Okee')
+})
 
 bot.launch()
 bot.telegram.getMe().then((getme) => {
@@ -968,12 +979,5 @@ bot.telegram.getMe().then((getme) => {
     console.log(chalk.whiteBright('╭─── [ LOG ]'))
 })
 
-router.get('/', (req, res) => {
-    res.send('Konekkk!!!')
-})
-
-app.listen(3000, () => {
-    console.log('Okee')
-})
 process.once('SIGINT', () => bot.stop('SIGINT'))
 process.once('SIGTERM', () => bot.stop('SIGTERM'))
