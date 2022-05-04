@@ -945,7 +945,7 @@ bot.on("message", async(lol) => {
                 if (!isGroup && !isCmd && !isMedia) {
                     await lol.replyWithChatAction("typing")
                     simi = await fetchJson(`https://api.lolhuman.xyz/api/simi?apikey=${apikey}&text=${body}`)
-                    await reply(simi.result)
+                    await reply('Halloo')
                 }
         }
     } catch (e) {
