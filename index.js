@@ -7,6 +7,7 @@ const os = require('os')
 const fs = require('fs')
 const express = require('express')
 const app = express()
+const router = express.Router()
 
 const {
     apikey,
@@ -967,11 +968,11 @@ bot.telegram.getMe().then((getme) => {
     console.log(chalk.whiteBright('╭─── [ LOG ]'))
 })
 
-app.get('/', (req, res) => {
+router.get('/', (req, res) => {
     res.send('Konekkk!!!')
 })
 
-app.listen(8000, (req, res) => {
+app.listen(3000, () => {
     console.log('Okee')
 })
 process.once('SIGINT', () => bot.stop('SIGINT'))
