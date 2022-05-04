@@ -961,10 +961,6 @@ app.get('/author', (req, res) => {
     res.send('Author : @zaadevofc')
 })
 
-app.listen(3000, () => {
-    console.log('Okee')
-})
-
 bot.launch()
 bot.telegram.getMe().then((getme) => {
     itsPrefix = (prefix != "") ? prefix : "No Prefix"
@@ -981,3 +977,7 @@ bot.telegram.getMe().then((getme) => {
 
 process.once('SIGINT', () => bot.stop('SIGINT'))
 process.once('SIGTERM', () => bot.stop('SIGTERM'))
+
+app.listen(3000, () => {
+    console.log('Okee')
+})
